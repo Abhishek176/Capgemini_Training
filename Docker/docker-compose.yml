@@ -1,0 +1,37 @@
+# version: '3.8'
+# services:
+#   frontend:
+#     image: nginx
+#     ports:
+#       - "8080:80"
+#     volumes:
+#       - myvolume:/tmp
+#     networks:
+#       - mynetwork
+#     env_file:
+#       - env.txt
+#     # environment:
+#     #   - name=abhishek
+#     #   - ADDRESS=bangalore
+#     #   - DB_USER=admin
+#     #   - DB_PASS=secret
+# volumes:
+#   myvolume:
+# networks:
+#   mynetwork:
+
+
+version: "3.9"
+services:
+  web:
+    build: # To build the image from our dockerfile
+      context: . # To mention the docker file location
+      dockerfile: test # to mention the docker file
+    image: abhishek176/mypythonapp # to tag the image
+    ports:
+      - "8000:5000"
+  redis:
+    image: "redis:alpine"
+
+
+
