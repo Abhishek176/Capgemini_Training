@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  frontend:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - mydata:/tmp
+    networks:
+      - mynetwork
+    environment:
+      - DB_USER=admin
+      - DB_PASS=secret
+  backend:
+    image: httpd
+    ports:
+      - "9090:80"
+    volumes:
+      - myvol:/tmp
+    networks:
+      - mynetwork
+    environment:
+      - DB_USER=admin
+      - DB_PASS=secret
+
+volumes:
+  mydata: {}
+  myvol: {}
+networks:
+  mynetwork:
