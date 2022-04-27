@@ -19,9 +19,11 @@ docker service create --mode=global -d alpine ping google.com : To start contain
 docker node update --label-add="key=value" <hostname_of_worker_node/workerid> : TO add the label to node
 docker service create --constraint node.labels.key==value --replicas=2 -d <image_name> : TO run the service in those node where we have the specific label
 docker service create --constraint node.role==manager --replicas=2 -d <image_name> : To run the service in manager
+docker service update --image=<image_name> <service_id> : To update the image in service
 https://docs.docker.com/engine/reference/commandline/service_create/
 
 docker node update --availability=<active/pause/drain> <hostname_of_worker_node/workerid>: To put the node on maintenance
+
 
 docker service update --image <image_name> <service_id> : To update the service
 docker secret create <secret_name> - : To create secret from commandline
