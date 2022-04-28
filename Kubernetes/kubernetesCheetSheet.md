@@ -19,12 +19,15 @@ kubectl run myapp --image=nginx --dry-run=client -o yaml > <file_name>.yml : To 
 kubectl exec -it <pod_name> -- bash/sh/ash : To go inside the container
 kubectl exec -it <pod_name> -c <container_name> -- bash/sh/ash : To go inside the container if it is a multi container pod
 kubectl get pod -w : To run kubectl get pod command in watch mode
+kubectl get <resource_type> --show-labels : TO check the labels
 kubectl edit <resource_type> <resource_name> : To modify the resource
 
 # Label
 kubectl label <resource_type> <resource_name> key=value : To attach label to any resource
 kubectl label --overwrite <resource_type> <resource_name> key=value : To overwrite the label
 kubectl label <resource_type> <resource_name> key- : To remove the label
+kubectl get pod -l app=myapp : list all the pod who has app==myapp label
+kubectl delete pod -l app=myapp : TO delete pod who has app==myapp label
 
 #Replication Controller
 kubectl get rc : To list the replication controller
