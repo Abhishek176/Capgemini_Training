@@ -52,9 +52,10 @@ Kubectl describe deploy <deployment_name> : To describe the deployment
 kubectl scale deploy <deployment_name> --replicas=<no_of replicas> : TO scale the replicas
 kubectl rollout history deploy <deployment_name> : To check the revision details of the deployment 
 kubectl rollout status deployment <deployment_name> : To check the rollout status
-kubectl rollout undo deploy myapp-deploy : To rollback to previous revesion
-kubectl rollout undo deploy myapp-deploy --to-revision=<revision_no> : To rollback to specific revesion
-kubectl rollout history deploy myapp-deploy --revision=<revision_no> :  To check the change made in the specific revesion
+kubectl rollout undo deploy <deployment_name> : To rollback to previous revesion
+kubectl rollout undo deploy <deployment_name> --to-revision=<revision_no> : To rollback to specific revesion
+kubectl rollout history deploy <deployment_name> --revision=<revision_no> :  To check the change made in the specific revesion
+kubectl rollout restart deploy <deployment_name> : To restart all the pods of deployment
 
 # service
 kubectl expose <deployment/rs/rc/pod> <deployment/rs/rc/pod_name> --type=ClusterIP/NodePort/LoadBalancer --port=<service_port> --target-port=<backend_pod_port> --name=<service_name> : To cerate service in imperative way
