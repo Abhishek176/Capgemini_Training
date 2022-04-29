@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  initContainers:
+  - name: initcontainer1
+    image: ubuntu
+    command:
+      - sleep
+      - "60" 
+  - name: initcontainer2
+    image: ubuntu
+    command:
+      - sleep1
+      - "60" 
+  containers:
+  - name: nginx-container
+    image: nginx
