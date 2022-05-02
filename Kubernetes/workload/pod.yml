@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: finance
+  name: hr
   labels:
-    app: finance
+    app: hr
 spec:
   containers:
   - name: nginx-container

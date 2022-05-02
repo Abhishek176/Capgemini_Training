@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: example.myapp.com
+    http:
+      paths:
+      - path: /hr
+        pathType: Prefix
+        backend:
+          service:
+            name: hrsvc
+            port:
+              number: 8080
+      - path: /finance
+        pathType: Prefix
+        backend:
+          service:
+            name: financesvc
+            port:
+              number: 9090
