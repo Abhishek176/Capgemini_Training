@@ -76,6 +76,11 @@ kubectl get job
 kubectl describe job <job_name> : To describe the job
 kubectl delete job <job_name> : To delete the job
 
+# cronJob
+kubectl get cj
+kubectl describe cj <cronjob_name> : To describe the job
+kubectl delete job <cronjob_name> : To delete the job
+
 # configmap
 kubectl create cm cm1 --from-literal=key1=value1 --from-literal=key2=value2 : To create configmap
 kubectl create cm cm2 --from-file=<filename> : To create configmap from file
