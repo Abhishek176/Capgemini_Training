@@ -6,7 +6,7 @@ spec:
   # parallelism: 2
   # completions: 5
   # backoffLimit: 2
-  activeDeadlineSeconds: 30
+  # activeDeadlineSeconds: 30
   template:
     metadata:
       name: myapp-pod
