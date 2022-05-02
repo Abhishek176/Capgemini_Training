@@ -4,6 +4,7 @@ metadata:
   name: hr
   labels:
     app: hr
+  namespace: test
 spec:
   containers:
   - name: nginx-container
