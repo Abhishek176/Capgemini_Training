@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  myapp-deploy
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app:  myapp
+    spec:
+      containers:
+      - name:  myapp-container
+        image:  nginx
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - appa
+            topologyKey: kubernetes.io/hostname
+        # podAntiAffinity:
+        #   preferredDuringSchedulingIgnoredDuringExecution:
+        #   - weight: 100
+        #     podAffinityTerm:
+        #       labelSelector:
+        #         matchExpressions:
+        #         - key: app
+        #           operator: In
+        #           values:
+        #           - appa
+        #       topologyKey: kubernetes.io/hostname
+    
