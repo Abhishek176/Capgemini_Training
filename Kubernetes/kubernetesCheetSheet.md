@@ -84,6 +84,8 @@ kubectl delete job <cronjob_name> : To delete the job
 # configmap
 kubectl create cm cm1 --from-literal=key1=value1 --from-literal=key2=value2 : To create configmap
 kubectl create cm cm2 --from-file=<filename> : To create configmap from file
+kubectl get cm : To list the configmaps
+kubectl describe cm <configmap_name> : To describe configmap
 
 # Taints and toleration
 kubectl taint node <node_name> key=value:Effect<NoSchedule/PreferNoSchedule/NoExecute> : To apply taint to node
