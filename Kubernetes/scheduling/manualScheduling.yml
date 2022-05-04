@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  nodeName: pool-kt776f4qi-crqes
+  containers:
+  - name: nginx-container
+    image: nginx
