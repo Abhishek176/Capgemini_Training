@@ -13,6 +13,6 @@ spec:
   volumes:
   - name: test
     persistentVolumeClaim:
-      claimName: pvc
+      claimName: dynamicpvc
 
 
