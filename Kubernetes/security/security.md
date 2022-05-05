@@ -43,7 +43,7 @@ Step 7: Create a new context
 kubectl config set-credentials demo --client-certificate=demo.crt --client-key=demo.key
 
 Step 8: Set new Context
-kubectl config set-context demo-context --cluster cluster_name --user=demo
+    kubectl config set-context demo-context --cluster do-blr1-k8s-1-22-8-do-1-blr1-1651729654958 --user=demo
 
 Step 9: Use Context to Verify
 kubectl --context=demo-context get pods
