@@ -65,7 +65,7 @@ passwd demo
 ```
 - Master Node:
 ```sh
-scp kube-proxy.crt kube-proxy.key cka-worker.crt cka-worker.key ca.crt demo@68.183.92.156:/tmp
+scp kube-proxy.crt kube-proxy.key cka-worker.crt cka-worker.key ca.crt demo@Worker_IP:/tmp
 
 ```
 - Worker Node:
