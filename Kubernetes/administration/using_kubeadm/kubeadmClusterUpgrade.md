@@ -2,6 +2,8 @@
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 
+https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
+
 ##### Step 1: Configure Docker
 ```sh
 apt-get update
